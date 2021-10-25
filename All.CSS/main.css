@@ -13,6 +13,12 @@ body{
     background-color: #0E0D0D;
     
 }
+/* esto estilo es para el menu */
+.body-menu{
+
+    background-color: #fff;
+
+}
 *{
     box-sizing: border-box;
 }
@@ -89,6 +95,34 @@ p{
     #texto-prueba{
         display: none;
     }
+}
+/*************************estilos Menus **********************************/
 
-  
+.navbar-brand{
+background-image: url(/img/favicon.ico);
+background-color: #fff;
+
+}
+.me-2{
+    margin-right: .5rem!important;
+    margin-left: 3rem!important;
+    border-radius: 16px;
+    width: 100%;
+    padding: 5px 33px;
+}
+.tarjeta{
+    width: 250px;
+    margin: 0 auto;
+    
+    
+    
+}
+
+.album{
+    width: 164px;
+    height: 187px;
+    box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+    background-color: #FCFF68;
+    margin-top: 40px;
+    
 }
