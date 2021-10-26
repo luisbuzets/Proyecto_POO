@@ -1,0 +1,54 @@
+body{
+
+    background-color: #F4F4F4;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+
+}
+@font-face{
+    font-family: 'fuente cool';
+    src: url(../fonts/Buckerley.ttf);
+}
+
+
+.navbar-brand{
+    background-image: url(/img/favicon.ico);
+    background-color: #fff;
+    
+    }
+    .me-2{
+        margin-right: .5rem!important;
+        margin-left: 3rem!important;
+        border-radius: 16px;
+        border-color: black;
+        border-width: 2px;
+        width: 100%;
+        padding: 5px 33px;
+    }
+    .tarjeta{
+        width: 250px;
+        margin: 10px 40px;
+        
+        
+        
+    }
+    .col-6{
+        width: 42%;
+    
+    
+    }
+    
+    .album{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background-color: #FCFF68;
+        margin-top: 40px;
+        border-radius: 12px;
+        
+    }
+    #logo{
+        width: 45px;
+        height: 50px;
+        margin-left: auto;
+        margin-right: auto;
+    }
