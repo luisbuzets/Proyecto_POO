@@ -1,12 +1,10 @@
 body{
 
     background-color: #F4F4F4;
+    
     font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+    width: 100%;
 
-}
-@font-face{
-    font-family: 'fuente cool';
-    src: url(../fonts/Buckerley.ttf);
 }
 
 
@@ -17,7 +15,7 @@ body{
     }
     .me-2{
         margin-right: .5rem!important;
-        margin-left: 3rem!important;
+        margin-left: 2rem!important;
         border-radius: 16px;
         border-color: black;
         border-width: 2px;
@@ -37,18 +35,102 @@ body{
     
     }
     
-    .album{
+    .menu{
         width: 132px;
         height: 132px;
         box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
-        background-color: #FCFF68;
+        /*background-color: #ebca0f;*/
+        background: linear-gradient(to bottom, #f3a27d  0%, #f8c671 100%);
         margin-top: 40px;
         border-radius: 12px;
         
     }
-    #logo{
-        width: 45px;
-        height: 50px;
-        margin-left: auto;
-        margin-right: auto;
+    .menu-2{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background: linear-gradient(to bottom, #6BCAFA  0%, #43DCE1 100%);
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    .menu-3{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background: linear-gradient(to bottom, #be8aeb  0%, #a663ca  100%);
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    .menu-4{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background: linear-gradient(to bottom, #64eb7d  0%, #8DF9B9 100%);
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    .menu:hover{
+        background: linear-gradient(to bottom, #fbaa84af  0%, #f7c368a6 100%);
+    }
+    .menu-2:hover{
+        background: linear-gradient(to bottom, #6bcafaad  0%, #43dce1a4 100%);
+    }
+    .menu-3:hover{
+        background: linear-gradient(to bottom, #be8aeb80  0%, #a663ca83  100%);
+    }
+    .menu-4:hover{
+        background: linear-gradient(to bottom, #64eb7d81  0%, #8df9b880 100%);
+    }
+
+    
+
+
+    .logo{
+        width: 76px;
+        height: 60px;
+        margin-left: 151px;
+        
+        
+    }
+    .logo-app{
+        flex: 1;
+    }
+    .card-title{
+        font-size: 20px;
+        margin: 6px;
+        font-weight:inherit;
+
+    }
+    .notificacion{
+        font-size: 45px;
+        margin: 2px;
+
+    }
+    .perfil{
+        font-size: 40px;
+        margin-left: 42px;
+        margin-bottom: 4px;
+
+    }
+    #menu-comida{
+        background-color: green;
+
+
+    }
+    #menu-supermercado{
+        background-color: red;
+        
+
+    }
+    #menu-medicamentos{
+        background-color: gray;
+
+
+    }
+    #menu-tecnologia{
+        background-color: orange;
+        
     }
