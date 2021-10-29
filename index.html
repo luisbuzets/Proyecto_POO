@@ -10,14 +10,14 @@
     <title>MENU</title>
 </head>
 <body>
-  
-
-        <nav class="navbar navbar-light bg-light">
+<!-- esto es el nadvar que incluye un nadvar sin estilos
+y estan agrgados el logo y los iconoc separado por div-->
+        <nav class="navbar navbar-light bg-light" style="margin: 8px;">
             <div class="container-fluid d-flex"  >
               <div class="logo-app">
                 <img class="logo" src="img/iconos/flash.png" alt="">
               </div>
-              <div class="notificacion">
+               <div class="notificacion">
                 <i class="far fa-bell"></i> 
               </div>
               <form >
@@ -29,82 +29,75 @@
             </div>
           </nav>
       </nav>
+      <!--aqui es donde esta el diseño de los menus-->
 
+      <div class="container">
+        <div class="row">
+          
+          <div class="col-6">
+            <div class="tarjeta" style="width: 2rem;">
+              <div class="menu " id="menu-comida" onclick="mostrarDetalleMenu()">
+                <img src="img/bg/Fast food_Flatline.png" alt="" style="width:100%">
+                <h5 class="card-title">comidas</h5>
+              </div>
+            </div>
+          </div>
+      
+
+         <div class="col-6">
+          <div class="tarjeta" style="width: 2rem;" >
+            <div class="menu-2" id="menu-supermercado" onclick="mostrarDetalleMenu()" >
+              <img src="img/bg/Shopping cart_Outline.png" alt="" style="width:100%">
+              <h5 class="card-title">Supermercado</h5>
+            </div>
+          </div>
+         </div>
+
+         <div class="col-6">
+          <div class="tarjeta" style="width: 2rem;" >
+            <div class="menu-3"id="menu-medicamentos" onclick="mostrarDetalleMenu()" >
+              <img src="img/bg/Doctor_Isometric.png" alt="" style="width:100%">
+              <h5 class="card-title">Mediamentos</h5>
+            </div>
+          </div>
+         </div>
+
+         <div class="col-6">
+          <div class="tarjeta" style="width: 2rem;">
+            <div class="menu-4" id="menu-tecnologia"onclick="mostrarDetalleMenu()">
+              <img src="img/bg/Iphone_Flatline.png" alt="" style="width:100%">
+              <h5 class="card-title">Tecnologia</h5>
+            </div>
+          </div>
+        </div>
+
+
+      </div><br><br>
+      <!-- El main es donde  hara  la funcionalidad-->
 
       <main>
-       
-        <div class="container-fluid">
-
-            <div class="row">
-              <div class="col-6">
-                <div class="tarjeta" style="width: 2rem;">
-                  <div class="menu " onclick="seleccionMenu('menu-comida')">
-                    <img src="img/bg/Fast food_Flatline.png" alt="" style="width:100%">
-                    <h5 class="card-title">comidas</h5>
-                  </div>
-                </div>
-              </div>
+        
+        <div id="detalle-comida">
           
 
-            <div class="col-6">
-              <div class="tarjeta" style="width: 2rem;">
-                <div class="menu-2" onclick="seleccionMenu('menu-supermercado')">
-                  <img src="img/bg/Shopping cart_Outline.png" alt="" style="width:100%">
-                  <h5 class="card-title">Supermercado</h5>
-                </div>
-              </div>
-            </div>
+        </div>
 
-            <div class="col-6">
-              <div class="tarjeta" style="width: 2rem;">
-                <div class="menu-3" onclick="seleccionMenu('menu-medicamentos')">
-                  <img src="img/bg/Doctor_Isometric.png" alt="" style="width:100%">
-                  <h5 class="card-title">Mediamentos</h5>
-                </div>
-              </div>
-            </div>
+        <div id="detalle-supermercado">
+          
 
-            <div class="col-6">
-              <div class="tarjeta" style="width: 2rem;">
-                <div class="menu-4"onclick="seleccionMenu('menu-tecnologia')">
-                  <img src="img/bg/Iphone_Flatline.png" alt="" style="width:100%">
-                  <h5 class="card-title">Tecnologia</h5>
-                </div>
-              </div>
-            </div>
-
-
-          </div>
-        </div><br><br><br>
-        
-        <div id="menu-comida">
-          menu comida
+        </div>
+        <div id="detalle-medicamentos">
+         
 
         </div>
 
-        <div id="menu-supermercado">
-          menu Supermercado
+        <div id="detalle-tecnologia">
+          
 
         </div>
-        <div id="menu-medicamentos">
-          menu medicamentos
-
-        </div>
-
-        <div id="menu-tecnologia">
-          menu Tecnologia
-
-        </div>
+    <!--  <button id="regresar" onclick="volver()">volver</button>-->
 
       </main>
-
-
-
-
-
-
-
-
 
 
 
