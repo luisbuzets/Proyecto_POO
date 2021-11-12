@@ -17,9 +17,11 @@ y estan agrgados el logo y los iconoc separado por div-->
               <div class="logo-app">
                 <img class="logo" src="img/iconos/flash.png" alt="">
               </div>
-               <div class="notificacion">
+               <div class="notificacion" id="alerta">
                 <i class="far fa-bell"></i> 
               </div>
+              <div class="notificacion" id="carrito">
+                <i class="fas fa-shopping-cart"></i></div>
               <form >
                 <div class="perfil">
                   <i class="fas fa-user-circle"></i>
@@ -36,7 +38,7 @@ y estan agrgados el logo y los iconoc separado por div-->
           
           <div class="col-6">
             <div class="tarjeta" style="width: 2rem;">
-              <div class="menu " id="menu-comida" onclick="mostrarDetalleMenu()">
+              <div class="menu " id="menu-comida" onclick="mostrarComida()">
                 <img src="img/bg/Fast food_Flatline.png" alt="" style="width:100%">
                 <h5 class="card-title">comidas</h5>
               </div>
@@ -46,17 +48,16 @@ y estan agrgados el logo y los iconoc separado por div-->
 
          <div class="col-6">
           <div class="tarjeta" style="width: 2rem;" >
-            <div class="menu-2" id="menu-supermercado" onclick="mostrarDetalleMenu()" >
+            <div class="menu-2" id="menu-supermercado" onclick="mostrarSupermercado()" >
               <img src="img/bg/Shopping cart_Outline.png" alt="" style="width:100%">
               <h5 class="card-title">Supermercado</h5>
             </div>
           </div>
          </div>
          
-
          <div class="col-6">
           <div class="tarjeta" style="width: 2rem;" >
-            <div class="menu-3"id="menu-medicamentos" onclick="mostrarDetalleMenu()" >
+            <div class="menu-3"id="menu-medicamentos" onclick="mostrarMedicamentos()" >
               <img src="img/bg/Doctor_Isometric.png" alt="" style="width:100%">
               <h5 class="card-title">Mediamentos</h5>
             </div>
@@ -65,7 +66,7 @@ y estan agrgados el logo y los iconoc separado por div-->
 
          <div class="col-6">
           <div class="tarjeta" style="width: 2rem;">
-            <div class="menu-4" id="menu-tecnologia"onclick="mostrarDetalleMenu()">
+            <div class="menu-4" id="menu-tecnologia"onclick="mostrarTecnologia()">
               <img src="img/bg/Iphone_Flatline.png" alt="" style="width:100%">
               <h5 class="card-title">Tecnologia</h5>
             </div>
@@ -77,24 +78,176 @@ y estan agrgados el logo y los iconoc separado por div-->
       <!-- El main es donde  hara  la funcionalidad-->
 
       <main>
-        
-        <div id="detalle-comida">
+       
+        <div id="detalle-comida" class="row">
+
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="card-img">
+                <img src="img/menu/pizzahut.jpg" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>pizza hut</h4>
+                <p>Pizzas - postres - comida Gurmet</p>
+              </div>
+            </div>
+          </div>
+           <!---->
+           <div class="card m-3">
+            <div class="card-content">
+              <div class="card-img">
+                <img src="img/menu/pizzahut.jpg" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>Little Caesar</h4>
+                <p>Pizzas - postres - comida Gurmet</p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>   
+        <!--SUPERMERCADO-->
+        <div id="detalle-supermercado" class="row">
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="walmart-img">
+                <img src="img/menu/walmart1.jpg.crdownload" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>Walmart</h4>
+                <p>Frutas-Limpieza-Hogar</p>
+              </div>
+            </div>
+          </div>
+
+          <!---->
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="colonia-img">
+                <img src="img/menu/LA-COLONIA.png" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>Walmart</h4>
+                <p>Frutas-Limpieza-Bebes</p>
+              </div>
+            </div>
+          </div>
+
+          
           
 
         </div>
-
-        <div id="detalle-supermercado">
-          
-
-        </div>
-        <div id="detalle-medicamentos">
+        <!--MEDICAMENTOS-->
+        <div id="detalle-medicamentos" class="row">
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="colonia-img">
+                <img src="img/menu/kielsa.png" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>Farmacias Kielsa</h4>
+                <p>Sus mejores precios</p>
+              </div>
+            </div>
+          </div>
+          <!--               -->
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="colonia-img">
+                <img src="img/menu/LogoFciaSiman.jpg" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>Farmacias Siman</h4>
+                <p>ahorro y Bienestar</p>
+              </div>
+            </div>
+          </div>
          
 
         </div>
+        <!--TECNOLOGIA-->
 
-        <div id="detalle-tecnologia">
-          
-
+        <div id="detalle-tecnologia" class="row">
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="colonia-img">
+                <img src="img/menu/jetstereo-logo.png" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>jetstereo</h4>
+                <p>Calidad-Tecnoligia</p>
+              </div>
+            </div>
+          </div>
+          <!--               -->
+          <div class="card m-3">
+            <div class="card-content">
+              <div class="colonia-img">
+                <img src="img/menu/Radioshack.png" alt="">
+              </div>
+              <div class="estrella">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="far fa-star"></i>
+                <i class="far fa-star"></i>
+              </div>
+              <div class="card-text">
+                <h4>RadioShack</h4>
+                <p>Distribuidor Autorizado</p>
+              </div>
+            </div>
+          </div>
         </div>
     <!--  <button id="regresar" onclick="volver()">volver</button>-->
 
