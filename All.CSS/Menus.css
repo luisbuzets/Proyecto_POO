@@ -2,11 +2,7 @@ body{
 
     background-color: #F4F4F4;
     font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
-    
-
 }
-
-
 
 .navbar-brand{
     background-image: url(/img/favicon.ico);
@@ -132,10 +128,10 @@ body{
         border-radius: 8px;
         border-color: black;
     }
-    .card .card-img{
+    .card .card-imagen{
         width: 100%;
     }
-    .card .card-img img{
+    .card .card-imagen img{
         width: 100%;
     }
     .estrella{
@@ -187,6 +183,103 @@ body{
 
     #detalle-tecnologia{
         display: none;  
+    }
+    #lista-carrito{
+        display:none;
+    }
+    .cuerpo{
+        width: 335px;
+        height: 208px;
+        background: #fff;
+       /* box-shadow:  0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+*/
+        padding: 12px;
+        display: flex;
+        border-radius: 8px;
+        border-color: black;
+
+    }
+   .table-productos img{
+        width: 190px;
+        display: flex;
+
+    }
+    .table-cantidad > input{
+        width: 62px;
+        
+        outline: 0;
+        font-size: 16px;
+        font-weight: 700p;
+        margin-right: 30px;
+    }
+    
+    .tabla{
+        padding: 12px;
+        margin-top: -74px;
+    }
+    .tr{
+        margin: 20px;
+
+    }
+    .delete{
+        justify-content: end;
+        
+
+    }
+    .card-img img{
+        width: 169px;
+        height: 139px;
+
+    }
+    .producto-contenido{
+        display: flex;
+    }
+    .precio-card{
+        font-family:'Helvetica Neue';
+        font-size: 1.6rem;
+
+    }
+    h7{
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .card-titulo{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+   .precio{
+       display: flex;
+       justify-content: end;
+       font-size: 1.1rem;
+       color: red;
+      
+   }
+   .fa-cart-arrow-down{
+   font-size: 50px;
+    padding: 15px;
+    padding-left: 33px;
+    color: orange;
+   }
+    #menu-supermercado{
+        display:;
+    }
+    #menu-medicamentos{
+        display:;        
+    }
+    #menu-tecnologia{
+        display:;
+    }
+    #menu-comida{
+        display:;
+    }
+    #productos-comida{
+        display: none;
+    }
+    #empresa-2{
+        
     }
 
     
