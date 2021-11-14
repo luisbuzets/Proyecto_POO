@@ -16,8 +16,7 @@
               <div class="logo-app">
                 <img class="logo" src="img/iconos/flash.png" alt="">
               </div>
-
-              
+    
                <div class="notificacion" id="alerta">
                 <i class="far fa-bell "onclick="mostrarAlertas()"></i>       
               </div>
@@ -26,14 +25,35 @@
               </div>
               <form >
                 <div class="perfil">
-                  <i class="fas fa-user-circle"></i>
+                  <i class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
                 </div>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               </form>
             </div>
           </nav>
       </nav>
-   
+      <div class="alert alert-primary position-static top-0 momento" role="alert">
+        !Su Producto se Añadio al Carrito!
+      </div>
+
+      <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        usuario 1
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-secondary p-2">Guardar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
       <div class="container">
         <div class="row">
@@ -250,7 +270,7 @@
             </div>
           </div>
         </div>
-        <!-- Los Prodcutos-->
+        <!-- Los Productos-->
         <div  id="productos-comida" class="row">
           <div class="card m-3 ">
             <h4 class="card-titulo">Pizza Peperoni 1</h4>
@@ -338,22 +358,25 @@
 
       </main><br>
 
-      <table class="tabla"  id="lista-carrito" style="display: none;">
-        <tbody class="cuerpo">
+      <table  id="lista-carrito"  class="table align-middle ">
+        <tbody id="tbody" class="">
           
         </tbody>
-      </table><br>
-      <div style="display: none;">
-        <div class="class row mx-4 ">
+      </table>
+      <br><br>
+      <div  id="botonPago"style="" class="pagar">
+        <div class=" row mx-4 ">
           <div class="col">
-            <h3 class="itemCartTotal">total:0</h3>
+            <h3 class="itemCartTotal">Total: 0</h3>
           </div>  
-        </div>
-        <div class="col d-flex justify-content-end">
           <button class="btn btn-success">Pagar</button>
         </div>
+        <div class="col d-flex justify-content-end">
+          
+        </div>
       </div>
       </div>
+      
      
     
      

@@ -197,12 +197,21 @@ body{
         display: flex;
         border-radius: 8px;
         border-color: black;
+        
 
     }
    .table-productos img{
-        width: 190px;
+        width: 169px;
+        height: 132px;
         display: flex;
 
+    }
+    .productos{
+        width: 100%;
+    }
+    .card-img {
+        width: 147px;
+        height: 120px;
     }
     .table-cantidad > input{
         width: 62px;
@@ -217,8 +226,10 @@ body{
         padding: 12px;
         margin-top: -74px;
     }
-    .tr{
+    tr{
         margin: 20px;
+        border-bottom: grey;
+        
 
     }
     .delete{
@@ -239,7 +250,7 @@ body{
         font-size: 1.6rem;
 
     }
-    h7{
+    .h7{
         font-size: 1.1rem;
         display: flex;
         justify-content: center;
@@ -263,23 +274,64 @@ body{
     padding-left: 33px;
     color: orange;
    }
+  .btn{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: stretch;
+
+   }
+   .pagar{
+       display: flex;
+       flex-direction: column;
+      border-radius: 14px;
+      justify-content: end;
+   }
+   .btn{
+       width: 71px;
+       border-radius: 7px;
+   }
     #menu-supermercado{
-        display:;
+       
     }
     #menu-medicamentos{
-        display:;        
+               
     }
     #menu-tecnologia{
-        display:;
+       
     }
     #menu-comida{
-        display:;
+       
     }
     #productos-comida{
         display: none;
     }
-    #empresa-2{
-        
+    #botonPago{
+        display: none;
+    }
+    .momento{
+        display: none;
+        width: 180px;
+    }
+    .btn.btn-success{
+        background: linear-gradient(to bottom, #f3a27d  0%, #f8c671 100%) !important ;
+        border-color:#f3a27d !important;
+        color: black;
+        border-radius: 15px;
+    }
+    .btn.btn-secondary{
+        background:linear-gradient(to bottom, #64eb7d  0%, #8DF9B9 100%) !important;
+        border-color:#64eb7d ;
+        color: black;
+        border-radius: 15px;
+    }
+    .btn.btn-light{
+        background: linear-gradient(to bottom, #6bcafaad  0%, #43dce1a4 100%) !important;
+        border-color: #43dce1a4;
+        border-radius: 15px;
+
     }
 
     
