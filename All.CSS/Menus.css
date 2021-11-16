@@ -9,7 +9,7 @@ body{
     background-color: #fff;
     
     }
-    /* estilos es del buscador */
+    /*--------------- estilos es del buscador---------- */
     .me-2{
         margin-right: 3.5rem!important;
         /*margin-left: 2rem!important;*/
@@ -19,7 +19,7 @@ body{
         width: 100%;
         padding: 5px 33px;
     }
-    /* los card de los menus*/
+    /*------------ los card de los menus --------------*/
     .tarjeta{
         width: 250px;
         
@@ -30,7 +30,7 @@ body{
     
     
     }
-    /*menu estilos de la posicion*/
+    /*--------------menu estilos de la posicion ----------*/
     .row{
         justify-content: space-around;
         align-items: center;
@@ -90,7 +90,7 @@ body{
 
     
 
-
+/* ------------------- logo de la compania------*/
     .logo{
         width: 76px;
         height: 60px;
@@ -105,18 +105,21 @@ body{
         font-weight:inherit;
 
     }
+    /*----------- icono de la campanita------------*/
     .notificacion{
         font-size: 2.5rem;
         margin-left: 85px;
         flex: 1;
 
     }
+    /*--------------- icono del usuario ---------------*/
     .perfil{
         font-size: 40px;
         margin-left: 7px;
         margin-bottom: 4px;
 
     }
+    /*------------- estilos de la companias ---------*/
     .card{
         width: 335px;
         height: 246px;
@@ -134,6 +137,7 @@ body{
     .card .card-imagen img{
         width: 100%;
     }
+    /*------- icono de las estrellas ----------*/
     .estrella{
         font-size: 24px;
        /* color:#FCFF68; color: #FD7E14;*/
@@ -145,23 +149,21 @@ body{
     margin: 5px;
     padding-top: 3px;
     }
+
     #carrito{
         display: none;
     }
     
-
-
-
     #detalle-comida{
         display: none;
     
     }
 
-
     #detalle-supermercado{ 
         display: none;
       
     }
+    /* los estilos de las tarjetas de la compania*/
 
     .colonia-img img{
         width: 291px;
@@ -178,9 +180,7 @@ body{
   }
     #detalle-medicamentos{
         display: none;
-
     }
-
     #detalle-tecnologia{
         display: none;  
     }
@@ -200,6 +200,7 @@ body{
         
 
     }
+    /*------------ el estilos de los productos */
    .table-productos img{
         width: 169px;
         height: 132px;
@@ -214,18 +215,19 @@ body{
         height: 120px;
     }
     .table-cantidad > input{
-        width: 62px;
+        width: 44px;
         
         outline: 0;
         font-size: 16px;
-        font-weight: 700p;
-        margin-right: 30px;
+        margin-left: 11px;
+       padding-left: 12px;
     }
     
     .tabla{
         padding: 12px;
         margin-top: -74px;
     }
+    /* --------------- estilos del carrito ---------*/
     tr{
         margin: 20px;
         border-bottom: grey;
@@ -294,15 +296,19 @@ body{
        border-radius: 7px;
    }
     #menu-supermercado{
+        display:;
        
     }
     #menu-medicamentos{
+        display:;
                
     }
     #menu-tecnologia{
+        display:;
        
     }
     #menu-comida{
+        display:;
        
     }
     #productos-comida{
@@ -333,5 +339,146 @@ body{
         border-radius: 15px;
 
     }
+    /*-------------------- Estilos de la tarejta de credito/debito ------*/
+    .contenedor {
+        width: 98%;
+        max-width: 1000px;
+        padding: 25px 19px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -147px;
+        
+    }
+    .formulario-tarjeta {
+        background: #fff;
+        border-color: #0000;
+        width: 110%;
+       
+        padding: 135px 20px 22px 20px;
+        border-radius: 10px;
+        position: relative;
+        top: -120px;
+        z-index: 1;
+        
+        transition: clip-path .3s ease-out;
+    }
+    .logo-tarjeta {
+        width: 100%;
+        color: #fff;
+        z-index: 2;
+    }
+    
+    
+    
+    .logo-tarjeta img{
+        width: 100%;
+	    
+	    background-size: cover;
+	    
+    }
+    
+    
+    .formulario-tarjeta.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .formulario-tarjeta label {
+        display: block;
+        color: #7d8994;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    
+    .formulario-tarjeta input,
+    .formulario-tarjeta select,
+    .btn-enviar {
+        border: 2px solid #CED6E0;
+        font-size: 18px;
+        height: 50px;
+        width: 100%;
+        padding: 5px 12px;
+        transition: .3s ease all;
+        border-radius: 5px;
+    }
+    
+    .formulario-tarjeta input:hover,
+    .formulario-tarjeta select:hover {
+        border: 2px solid #93BDED;
+    }
+    
+    .formulario-tarjeta input:focus,
+    .formulario-tarjeta select:focus {
+        outline: rgb(4,4,4);
+        box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+    }
+    
+    .formulario-tarjeta input {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    .formulario-tarjeta .flexbox {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .formulario-tarjeta .expira {
+        width: 100%;
+    }
+    
+    .formulario-tarjeta .ccv {
+        width: 100px;
+    }
+    
+    .formulario-tarjeta .grupo-select {
+        width: 100%;
+        margin-right: 15px;
+        position: relative;
+    }
+    
+    .formulario-tarjeta select {
+        -webkit-appearance: none;
+    }
+    
+    .formulario-tarjeta .grupo-select i {
+        position: absolute;
+        color: #CED6E0;
+        top: 18px;
+        right: 15px;
+        transition: .3s ease all;
+    }
+    
+    .formulario-tarjeta .grupo-select:hover i {
+        color: #93bfed;
+    }
+    
+    .formulario-tarjeta .btn-enviar {
+        border: none;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(to bottom, #FF5252 0%, #EF2828 100%);
+        box-shadow: 2px 2px 10px 0px rgba(240, 64, 11, 0.486);
+    }
+    
+    .formulario-tarjeta .btn-enviar:hover {
+        background: #1850b1;
+    }
+    #ocultar{
+        display: none;
+    }
+
+    
+   
+    
+    
+    /*----------------------------*/
+   
+  
+
+
 
     

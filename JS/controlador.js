@@ -63,6 +63,11 @@ function abrirCarrito(){
     document.getElementById('lista-carrito').style.display ='flex';
 
 }
+function desplegarTarjeta(){
+    document.getElementById('lista-carrito').style.display ='none';
+    document.getElementById('ocultar').style.display ='flex';
+}
+/* funcionalida del carrito  */
 
 const Clickbutton  = document.querySelectorAll('.boton')
 let carrito =[]
@@ -189,3 +194,40 @@ window.onload = function(){
         renderCarrito()
     }
 }
+/*-------------- funcionalida de la tarjeta */
+const formulario = document.querySelector('#formulario-tarjeta');
+      
+    
+    
+    for(let i = 1; i <= 12; i++){
+        let opcion = document.createElement('option');
+        opcion.value = i;
+        opcion.innerText = i;
+        formulario.selectMes.appendChild(opcion);
+    }
+    
+    
+    const yearActual = new Date().getFullYear();
+    for(let i = yearActual; i <= yearActual + 8; i++){
+        let opcion = document.createElement('option');
+        opcion.value = i;
+        opcion.innerText = i;
+        formulario.selectYear.appendChild(opcion);
+    }
+    formulario.inputNumero.addEventListener('keyup', (e) => {
+        let valorInput = e.target.value;
+        formulario.inputNumero.value = valorInput
+        .replace(/\s/g, '')
+        .replace(/\D/g, '')
+        .replace(/([0-9]{4})/g, '$1 ')
+        .trim();
+    
+    });
+    formulario.inputNombre.addEventListener('keyup', (e) => {
+        let valorInput = e.target.value;
+        formulario.inputNombre.value = valorInput.replace(/[0-9]/g, '');
+
+    });
+    
+
+    
