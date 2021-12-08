@@ -1,4 +1,8 @@
 
+
+
+
+
 function mostrarComida(){
     document.getElementById('menu-supermercado').style.display = 'none';
     document.getElementById('menu-medicamentos').style.display = 'none';
@@ -181,9 +185,10 @@ function sumaCantidad(e){
         }
     })
   //  console.log(carrito)
-    
 
 }
+
+
 function addLocalStorage(){
     localStorage.setItem('carrito', JSON.stringify(carrito))
 }

@@ -1,3 +1,18 @@
+<?php
+session_start();
+if(!isset($_SESSION["token"])){
+    header("Location:  Registro.html");
+    
+}
+if(!isset($_COOKIE["token"])){
+    header("Location:  Registro.html");
+    
+}
+if($_SESSION["token"] !=$_COOKIE["token"]){
+    header("Location:  Registro.html");
+    
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +22,7 @@
     <script src="https://kit.fontawesome.com/df25df16a0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="All.CSS/Menus.css">
+   
     <title>MENU</title>
 </head>
 <body>
@@ -18,7 +34,7 @@
               </div>
     
                <div class="notificacion" id="alerta">
-                <i class="far fa-bell "onclick="mostrarAlertas()"></i>       
+                <i class="far fa-bell "onclick="mostrarAlertas()"></i>      
               </div>
               <div class="notificacion" id="carrito">
                 <i class="fas fa-shopping-cart" onclick="abrirCarrito()"></i>
@@ -26,6 +42,7 @@
               <form >
                 <div class="perfil">
                   <i class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
+                  <a href="logout.php">Cerrar Session</a> 
                 </div>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               </form>
@@ -427,13 +444,8 @@
           <button type="submit" class="btn-enviar">Finalizar Orden</button>
         </form>
       </div>
-     
-    
-     
-
-
-
-
+      
+    <script src="JS/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="JS/controlador.js"></script>
 </body>
