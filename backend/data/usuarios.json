@@ -1,0 +1,14 @@
+[
+  {
+    "idUsuario": 1,
+    "nombre": "cinthya",
+    "apellido": "Rodriguez",
+    "codigoOrdenes": [1,3,4]
+  },
+  {
+    "idUsuario": 2,
+    "nombre": "Luis",
+    "apellido": "Castillo",
+    "codigoOrdenes": [5,6]
+  }
+]

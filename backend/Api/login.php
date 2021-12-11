@@ -30,6 +30,12 @@ switch($_SERVER['REQUEST_METHOD']){
            }   
         break;
     case 'GET':
+        if (isset($_GET['id'])){
+            echo json_encode(Login::obtenerUsuarios($_GET['id']));
+        }
+        else{
+            echo json_encode(Login::obtenerUsuario());
+        }
         break;
     case 'PUT':
         break;

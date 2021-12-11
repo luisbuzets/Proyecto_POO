@@ -1,18 +1,9 @@
 <?php
-session_start();
-if(!isset($_SESSION["token"])){
-    header("Location:  Registro.html");
-    
-}
-if(!isset($_COOKIE["token"])){
-    header("Location:  Registro.html");
-    
-}
-if($_SESSION["token"] !=$_COOKIE["token"]){
-    header("Location:  Registro.html");
-    
-}
+
+include 'seguridad.php'
+
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,8 +12,7 @@ if($_SESSION["token"] !=$_COOKIE["token"]){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/df25df16a0.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="All.CSS/Menus.css">
-   
+    <link rel="stylesheet" href="All.CSS/Menus.css"> 
     <title>MENU</title>
 </head>
 <body>
@@ -40,9 +30,10 @@ if($_SESSION["token"] !=$_COOKIE["token"]){
                 <i class="fas fa-shopping-cart" onclick="abrirCarrito()"></i>
               </div>
               <form >
-                <div class="perfil">
-                  <i class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"></i>
-                  <a href="logout.php">Cerrar Session</a> 
+                <div class="perfil d-flex justify-content-between">
+                  <i class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"><h3 id="texto-hola"></h3></i>
+                  <a href="logout.php" ><i  class="fas fa-power-off" style="color: red;"></i>
+                  </a> 
                 </div>
                 <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               </form>
@@ -58,20 +49,17 @@ if($_SESSION["token"] !=$_COOKIE["token"]){
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Usuarios</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Usuario</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" >
         seleccione el Usuarios
-        <select class="form-control">
-          <option value="1">Usuarios 1</option>
-          <option value="2">Usuarios 2</option>
-          <option value="3">Usuarios 3</option>
+        <select id="usuarioActual" class="form-control mr-2 "   onchange="cambiarUsuario()">
         </select>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-secondary p-2">Aceptar</button>
+        <!--<button type="button" class="btn btn-secondary p-2"  onchange="cambiarUsuario()">Aceptar</button>-->
       </div>
     </div>
   </div>
@@ -122,261 +110,27 @@ if($_SESSION["token"] !=$_COOKIE["token"]){
 
       <main>
        
-        <div id="detalle-comida" class="row">
-
-          <div class="card m-3" id="empresa-1" onclick="seleccionEmpresa()">
-            <div class="card-content">
-              <div class="card-imagen">
-                <img src="img/menu/pizzahut.jpg" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>pizza hut</h4>
-                <p>Pizzas - postres - comida Gurmet</p>
-              </div>
-            </div>
-          </div>
-           <!---->
-           <div class="card m-3 " id="empresa-2" onclick="">
-            <div class="card-content">
-              <div class="card-imagen ">
-                <img src="img/menu/pizzahut.jpg" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>Little Caesar</h4>
-                <p>Pizzas - postres - comida Gurmet</p>
-              </div>
-            </div>
-          </div>
-
-
+        <div id="detalle-comida" class="row" >
+          <!---->   
         </div>   
         <!--SUPERMERCADO-->
         <div id="detalle-supermercado" class="row">
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="walmart-img">
-                <img src="img/menu/walmart.jpg" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>Walmart</h4>
-                <p>Frutas-Limpieza-Hogar</p>
-              </div>
-            </div>
-          </div>
-
           <!---->
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="colonia-img">
-                <img src="img/menu/LA-COLONIA.png" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>Walmart</h4>
-                <p>Frutas-Limpieza-Bebes</p>
-              </div>
-            </div>
-          </div>
-
-          
-          
-
         </div>
         <!--MEDICAMENTOS-->
         <div id="detalle-medicamentos" class="row">
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="colonia-img">
-                <img src="img/menu/kielsa.png" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>Farmacias Kielsa</h4>
-                <p>Sus mejores precios</p>
-              </div>
-            </div>
-          </div>
           <!--               -->
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="colonia-img">
-                <img src="img/menu/LogoFciaSiman.jpg" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>Farmacias Siman</h4>
-                <p>ahorro y Bienestar</p>
-              </div>
-            </div>
-          </div>
-         
-
         </div>
         <!--TECNOLOGIA-->
-
         <div id="detalle-tecnologia" class="row">
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="colonia-img">
-                <img src="img/menu/jetstereo-logo.png" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>jetstereo</h4>
-                <p>Calidad-Tecnoligia</p>
-              </div>
-            </div>
-          </div>
           <!--               -->
-          <div class="card m-3">
-            <div class="card-content">
-              <div class="colonia-img">
-                <img src="img/menu/Radioshack.png" alt="">
-              </div>
-              <div class="estrella">
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="fas fa-star"></i>
-                <i class="far fa-star"></i>
-                <i class="far fa-star"></i>
-              </div>
-              <div class="card-text">
-                <h4>RadioShack</h4>
-                <p>Distribuidor Autorizado</p>
-              </div>
-            </div>
-          </div>
         </div>
         <!-- Los Productos-->
         <div  id="productos-comida" class="row">
-          <div class="card m-3 ">
-            <h4 class="card-titulo">Pizza Peperoni 1</h4>
-            <div class="producto-contenido">
-              <div class="productos">
-                <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
-              </div>
-              <div class="card-text">
-                <p1>pizza Peperoni para 8 personas</p1>
-                <i class="fas fa-cart-arrow-down boton"></i>
-              </div> 
-            </div>
-            <td class="precio-card p-2">
-              <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
-            </td>
-          </div>
-
-          <!--        -->
-          <div class="card m-3">
-            <h4 class="card-titulo">Pizza Peperoni 2</h4>
-            <div class="producto-contenido">
-              <div class="productos">
-                <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
-              </div>
-              <div class="card-text">
-                <p1>pizza Peperoni para 8 personas</p1>
-                <i class="fas fa-cart-arrow-down boton"></i>
-              </div>
-            </div>
-            <td class="precio-card p-2">
-              <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
-            </td>
-          </div>
-          <!--        -->
-          <div class="card m-3">
-            <h4 class="card-titulo">Pizza Peperoni 3</h4>
-            <div class="producto-contenido">
-              <div class="productos">
-                <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
-              </div>
-              <div class="card-text">
-                <p1>pizza Peperoni para 8 personas</p1>
-                <i class="fas fa-cart-arrow-down boton"></i>
-              </div>
-            </div>
-            <td class="precio-card p-2">
-              <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
-            </td>
-          </div>
-          <!--        -->
-          <div class="card m-3">
-            <h4 class="card-titulo">Pizza Peperoni 4</h4>
-            <div class="producto-contenido">
-              <div class="productos">
-                <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
-              </div>
-              <div class="card-text">
-                <p1>pizza Peperoni para 8 personas</p1>
-                <i class="fas fa-cart-arrow-down boton"></i>
-              </div>
-            </div>
-            <td class="precio-card p-2">
-            <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
-            </td>
-          </div>
-          <!--        -->
-          <div class="card m-3">
-            <h4 class="card-titulo">Pizza Peperoni 5</h4>
-            <div class="producto-contenido">
-              <div class="productos">
-                <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
-              </div>
-              <div class="card-text">
-                <p1>pizza Peperoni para 8 personas</p1>
-                <i class="fas fa-cart-arrow-down boton"></i>
-              </div>
-            </div>
-            <td class="precio-card p-2">
-            <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
-            </td>
-            </td>
-          </div>
-
+         
+          
         </div>
+        <!---->
 
       </main><br>
 
@@ -444,7 +198,6 @@ if($_SESSION["token"] !=$_COOKIE["token"]){
           <button type="submit" class="btn-enviar">Finalizar Orden</button>
         </form>
       </div>
-      
     <script src="JS/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="JS/controlador.js"></script>

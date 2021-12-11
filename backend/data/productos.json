@@ -1,0 +1,129 @@
+[
+    {
+      "idEmpresa": 1,
+      "idProducto":1,
+      "nombreProducto": "Pizza Peperoni",
+      "descripcion": "clasica italiana",
+      "imagen": "img/menu/pizzahut.jpg",
+      "icono": "fas fa-cart-arrow-down ",
+      "precio": 100
+    },
+    {
+      "idEmpresa": 2,
+      "idProducto":2,
+      "nombreProducto": "Pizza De queso",
+      "descripcion": "Pizza para 8 personas ",
+      "imagen": "img/menu/pizzahut.jpg",
+      "icono": "fas fa-cart-arrow-down ",
+      "precio": 100
+    },
+    {
+      "idEmpresa": 3,
+      "idProducto":3,
+      "nombreProducto": "Pizza familliar",
+      "descripcion": "Pizza extra quesso y 3 ingredientes dierentes",
+      "imagen": "img/menu/pizzahut.jpg",
+      "icono": "fas fa-cart-arrow-down ",
+      "precio": 100
+    },
+    {
+      "idEmpresa": 4,
+      "idProducto":4,
+      "nombreProducto": "Pizza tropical",
+      "descripcion": "pizza con piña y queso extra",
+      "imagen": "img/menu/pizzahut.jpg",
+      "icono": "fas fa-cart-arrow-down ",
+      "precio": 100
+    },
+    {   
+        "idEmpresa": 5,
+        "idProducto":5,
+        "nombreProducto": "Barena",
+        "descripcion": "bebida",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa": 6,
+        "idProducto":6,
+        "nombreProducto": "shampoo",
+        "descripcion": "Jonhson ",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      { 
+        "idEmpresa": 7,
+        "idProducto":7,
+        "nombreProducto": "Bocina",
+        "descripcion": "bosina Huawei",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 299
+      },
+      {
+        "idEmpresa": 8,
+        "idProducto":8,
+        "nombreProducto": "Televisor SONY",
+        "descripcion": "50 pulgadas AMOLED",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa": 9,
+        "idProducto":9,
+        "nombreProducto": "Vitaflenaco",
+        "descripcion": "Para el dolor y el  malestar",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa": 10,
+        "idProducto":10,
+        "nombreProducto": "Alkaseltser",
+        "descripcion": "Pizza para 8 personas ",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa":11,
+        "idProducto":11,
+        "nombreProducto": "Macbook",
+        "descripcion": "Macbook Pro",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 299
+      },
+      {
+        "idEmpresa": 12,
+        "idProducto":12,
+        "nombreProducto": "Aspirina",
+        "descripcion": "Extra-fuerte",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa": 13,
+        "idProducto":13,
+        "nombreProducto": "Carnes",
+        "descripcion": "El corral",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      },
+      {
+        "idEmpresa": 14,
+        "idProducto":14,
+        "nombreProducto": "Bebes",
+        "descripcion": "Pañales-ropa-carriola",
+        "imagen": "img/menu/pizzahut.jpg",
+        "icono": "fas fa-cart-arrow-down ",
+        "precio": 100
+      }
+    
+  ]

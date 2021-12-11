@@ -1,11 +1,13 @@
 <?php
 class Login{
+    private $idUsuario;
     private $firstName;
     private $lastName;
     private $email;
     private $password;
 
-    public function __construct($firstName,$lastName,$Rodriguez,$email,$password){
+    public function __construct($idUsuario,$firstName,$lastName,$Rodriguez,$email,$password){
+    $this->idUsuario = $idUsuario;
     $this->firstName = $firstName;
     $this->lastName = $lastName;
     $this->Rodriguez = $Rodriguez;
@@ -24,6 +26,27 @@ class Login{
       return null;
 
     }
+    public static function obtenerUsuarios($idUsuario){
+        $contenidoArchivoUsuario = file_get_contents('../data/login.json'); 
+        $usuarios = json_decode($contenidoArchivoUsuario,true);
+        $usuarioSeleccionado = null;
+        for($i=0; $i< sizeof($usuarios);$i++){
+            if($usuarios[$i]['idUsuario'] == $idUsuario){
+                $usuarioSeleccionado = $usuarios[$i];
+                return $usuarioSeleccionado;
+            }
+        }
+        return null;
+
+    }
+    
+    public static function obtenerUsuario(){
+        $archivoObtenerUsaurio = file_get_contents('../data/login.json');
+        return json_decode($archivoObtenerUsaurio,true);
+}
+
+
+
     public static function getLogin(){
 
     }
@@ -104,6 +127,26 @@ class Login{
     public function setPassword($password)
     {
         $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idUsuario
+     */ 
+    public function getIdUsuario()
+    {
+        return $this->idUsuario;
+    }
+
+    /**
+     * Set the value of idUsuario
+     *
+     * @return  self
+     */ 
+    public function setIdUsuario($idUsuario)
+    {
+        $this->idUsuario = $idUsuario;
 
         return $this;
     }

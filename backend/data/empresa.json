@@ -1,0 +1,19 @@
+[
+  {
+    "idEmpresa": 1,
+    "nombreEmpresa": "Pizza Hut",
+    "imagen": "img/menu/pizzahut.jpg",
+    "descripcion": "Pizza-postres-comida Gurmet",
+    "icono": "fas fa-star",
+    "productos": [1,2,3,4]
+  },
+  {
+    "idEmpresa": 2,
+    "nombreEmpresa": "Little Ceaser",
+    "imagen": "img/menu/pizzahut.jpg",
+    "descripcion": "Pizza-postres-comida Gurmet",
+    "icono": "fas fa-star",
+    "productos": [3,4]
+  }
+  
+]

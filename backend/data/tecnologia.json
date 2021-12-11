@@ -1,0 +1,18 @@
+[
+  {
+    "idEmpresa": 7,
+    "nombreEmpresa": "Jetstereo",
+    "imagen": "img/menu/jetstereo-logo.png",
+    "descripcion": "Calidad-Tecnoligia",
+    "icono": "fas fa-star",
+    "productos": [8,11]
+  },
+  {
+    "idEmpresa": 8,
+    "nombreEmpresa": "Radioshack",
+    "imagen": "img/menu/Radioshack.png",
+    "descripcion": "Distribuidor Autorizado",
+    "icono": "fas fa-star",
+    "productos": [7]
+  }
+]

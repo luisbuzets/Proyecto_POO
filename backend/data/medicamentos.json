@@ -1,0 +1,18 @@
+[
+  {
+    "idEmpresa": 3,
+    "nombreEmpresa": "Kielsa",
+    "imagen": "img/menu/kielsa.png",
+    "descripcion": "Sus mejores precios",
+    "icono": "fas fa-star",
+    "productos": [10,9]
+    },
+  {
+    "idEmpresa": 4,
+    "nombreEmpresa": "Farmacia Siman",
+    "imagen": "img/menu/LogoFciaSiman.jpg",
+    "descripcion": "ahorro y Bienestar",
+    "icono": "fas fa-star",
+    "productos": [10,12]
+  }
+]
