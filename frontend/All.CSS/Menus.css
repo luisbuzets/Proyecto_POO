@@ -322,6 +322,9 @@ body{
         display: none;
 
     }
+    #productos{
+        display: none;
+    }
     #botonPago{
         display: none;
     }

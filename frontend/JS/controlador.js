@@ -1,5 +1,6 @@
 var usuarioSeleccionado ='';
-var empresaSeleccionada = null;
+var empresaSeleccionada = '';
+var idUsuario = '';
 
 function obtenerUsuario(){
 
@@ -10,6 +11,7 @@ function obtenerUsuario(){
     
 }).then(res=>{
     console.log('usuarioActual',res);
+
 
     document.getElementById('usuarioActual').innerHTML =''
     let usuario = res.data;
@@ -33,6 +35,7 @@ function cambiarUsuario () {
      url: `../backend/Api/login.php?id=${usuarioSeleccionado+1}`,
      responseType: 'json'
  }).then(res=>{
+   
      console.log(res);
      document.getElementById('texto-hola').innerHTML = `${res.data.firstName} ${res.data.lastName}`;
  }).catch(error=>{
@@ -41,7 +44,7 @@ function cambiarUsuario () {
  
 }
 
-function mostrarComida(){
+function mostrarComida(){                             
     document.getElementById('menu-supermercado').style.display = 'none';
     document.getElementById('menu-medicamentos').style.display = 'none';
     document.getElementById('menu-tecnologia').style.display = 'none'; 
@@ -98,7 +101,17 @@ function seleccionEmpresa(){
 }
 function seleccionSuperMercado(){
   document.getElementById('detalle-supermercado').style.display = 'none';
-    document.getElementById('productos-comida').style.display = 'flex';
+    document.getElementById('productos').style.display = 'flex';
+
+}
+function medicamentos(){
+  document.getElementById('detalle-medicamentos').style.display = 'none';
+    document.getElementById('productos').style.display = 'flex';
+
+}
+function tecnologia(){
+  document.getElementById('detalle-tecnologia').style.display = 'none';
+    document.getElementById('productos').style.display = 'flex';
 
 }
 function abrirCarrito(){
@@ -146,23 +159,22 @@ Clickbutton.forEach(card =>{
 cargarProductos();
 
 function cargarProductos(id){
-  console.log('Mostrar ' + id);
     //empresaSeleccionada = id 
     axios({
-        url:'../backend/Api/producto.php?idUsuario=1',
+        url:`../backend/Api/producto.php?idUsuario=1`,
         method:'GET',
         reponseType:'json',
         params:{
-        //  idUsuario = id
+        ///  idUsuario = id
         }
         
     }).then(res=>{
     console.log("productos",res)
     
         let productos = res.data;
-        document.getElementById('productos-comida').innerHTML=''; 
+        document.getElementById('productos').innerHTML=''; 
         for(let i=0; i<productos.length; i++){
-        document.getElementById('productos-comida').innerHTML +=
+        document.getElementById('productos').innerHTML +=
         `<div class="card m-3 ">
         <h4 class="card-titulo">${productos[i].nombreProducto}</h4>
         <div class="producto-contenido">
@@ -178,7 +190,7 @@ function cargarProductos(id){
           <h7 class="text-dark">Precio:<span class="precio">${productos[i].precio}</span></h7>
         </td>
       </div>`;
-      document.getElementById('productos-comida').value=null;
+      document.getElementById('productos').value=null;
     }
 
     }).catch(error=>{
@@ -415,18 +427,22 @@ obtenerSuperMercado();
 
 obtenerEmpresa();
 
-function obtenerMedicamento(){
+function obtenerMedicamento(id){
+  
     axios({
         url:'../backend/Api/medicamento.php',
         method:'get',
-        responseType: 'json'
+        responseType: 'json',
+        paramas:{
+          idEmpresa: id
+        }
     }).then(res=>{
         console.log(res);
         document.getElementById('detalle-medicamentos').innerHTML=''
         let medicamentos= res.data;
         for(let i=0; i<medicamentos.length; i++){
             document.getElementById('detalle-medicamentos').innerHTML +=
-            `<div class="card m-3">
+            `<div class="card m-3" onclick="medicamentos('${medicamentos[i].id}')">
             <div class="card-content">
               <div class="colonia-img">
                 <img src="${medicamentos[i].imagen}" alt="">
@@ -446,7 +462,7 @@ function obtenerMedicamento(){
           </div>`;
 
         }
-        document.getElementById('detalle-medicamentos').value=null;
+       // document.getElementById('detalle-medicamentos').value=null;
 
     }).catch(err=>{
         console.error(err);
@@ -454,18 +470,21 @@ function obtenerMedicamento(){
 }
 obtenerMedicamento();
 
-function obtenerTecnologia(){
+function obtenerTecnologia(id){
     axios({
         url:'../backend/Api/tecnologia.php',
         method:'get',
-        responseType: 'json'
+        responseType: 'json',
+        paramas:{
+          idUsuario: id
+        }
     }).then(res=>{
         console.log(res);
         document.getElementById('detalle-tecnologia').innerHTML=''
         let tecnologia = res.data;
         for(let i=0; i<tecnologia.length; i++){
             document.getElementById('detalle-tecnologia').innerHTML +=
-            `<div class="card m-3">
+            `<div class="card m-3" onclick="tecnologia('${tecnologia[i].id}')">
             <div class="card-content">
               <div class="colonia-img">
                 <img src="${tecnologia[i].imagen}" alt="">

@@ -14,6 +14,7 @@ include 'seguridad.php'
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="All.CSS/Menus.css"> 
     <title>MENU</title>
+    <link rel="shortcut icon" href="img/iconos/icono-32x32.png">
 </head>
 <body>
 
@@ -31,7 +32,7 @@ include 'seguridad.php'
               </div>
               <form >
                 <div class="perfil d-flex justify-content-between">
-                  <i class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"><h3 id="texto-hola"></h3></i>
+                  <i  class="fas fa-user-circle " data-bs-toggle="modal" data-bs-target="#exampleModal"><h3 id="texto-hola"></h3></i>
                   <a href="logout.php" ><i  class="fas fa-power-off" style="color: red;"></i>
                   </a> 
                 </div>
@@ -127,10 +128,28 @@ include 'seguridad.php'
         </div>
         <!-- Los Productos-->
         <div  id="productos-comida" class="row">
+        <div class="card m-3 ">
+    <h4 class="card-titulo">Pizza Peperoni 1</h4>
+    <div class="producto-contenido">
+      <div class="productos">
+        <img src="img/menu/pizzahut.jpg" class="card-img" alt="">
+      </div>
+      <div class="card-text">
+        <p1>pizza Peperoni para 8 personas</p1>
+        <i class="fas fa-cart-arrow-down boton"></i>
+      </div> 
+    </div>
+    <td class="precio-card p-2">
+      <h7 class="text-dark">Precio:<span class="precio">L. 100.00</span></h7>
+    </td>
+   </div>
          
           
         </div>
-        <!---->
+        <div  id="productos" class="row">
+
+        </div>
+        
 
       </main><br>
 
