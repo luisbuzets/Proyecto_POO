@@ -1,0 +1,18 @@
+[
+  {
+    "idEmpresa": 5,
+    "nombreEmpresa": "Walmart",
+    "imagen": "img/menu/walmart.jpg",
+    "descripcion": "Frutas-Limpieza-Hogar",
+    "icono": "fas fa-star",
+    "productos": [5,13]
+  },
+  {
+    "idEmpresa": 6,
+    "nombreEmpresa": "La Colonia",
+    "imagen": "img/menu/LA-COLONIA.png",
+    "descripcion": "Frutas-Limpieza-Bebes",
+    "icono": "fas fa-star",
+    "productos": [14,6 ]
+  }
+]

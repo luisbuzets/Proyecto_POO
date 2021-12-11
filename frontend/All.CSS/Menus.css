@@ -1,0 +1,492 @@
+body{
+
+    background-color: #F4F4F4;
+    font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.fas .fa-power-off::before{
+    color: red;
+
+}    
+
+.navbar-brand{
+    background-image: url(/img/favicon.ico);
+    background-color: #fff;
+    
+    }
+    /*--------------- estilos es del buscador---------- */
+    .me-2{
+        margin-right: 3.5rem!important;
+        /*margin-left: 2rem!important;*/
+        border-radius: 16px;
+        border-color: black;
+        border-width: 2px;
+        width: 100%;
+        padding: 5px 33px;
+    }
+    /*------------ los card de los menus --------------*/
+    .tarjeta{
+        width: 250px;
+        
+    }
+    /* boostra Grip*/
+    .col-6{
+        width: 42%;
+    
+    
+    }
+    /*--------------menu estilos de la posicion ----------*/
+    .row{
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    /* cada card son menus que inician con la clase .menu a .menu-4*/
+    .menu{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        /*background-color: #ebca0f;*/
+        background: linear-gradient(to bottom, #f3a27d  0%, #f8c671 100%);
+        margin-top: 40px;
+        border-radius: 12px;
+        
+    }
+    .menu-2{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background: linear-gradient(to bottom, #6BCAFA  0%, #43DCE1 100%);
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    .menu-3{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+        background: linear-gradient(to bottom, #be8aeb  0%, #a663ca  100%);
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    .menu-4{
+        width: 132px;
+        height: 132px;
+        box-shadow: 0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);/*esto es para las sombras de los cards*/
+        background: linear-gradient(to bottom, #64eb7d  0%, #8DF9B9 100%);/*esto son los colores dobles para tener un conntraste*/
+        margin-top: 40px;
+        border-radius: 12px;
+
+    }
+    /* este estilos es cuando se da clic da una transparecias*/
+    .menu:hover{
+        background: linear-gradient(to bottom, #fbaa84af  0%, #f7c368a6 100%);
+    }
+    .menu-2:hover{
+        background: linear-gradient(to bottom, #6bcafaad  0%, #43dce1a4 100%);
+    }
+    .menu-3:hover{
+        background: linear-gradient(to bottom, #be8aeb80  0%, #a663ca83  100%);
+    }
+    .menu-4:hover{
+        background: linear-gradient(to bottom, #64eb7d81  0%, #8df9b880 100%);
+    }
+
+    
+
+/* ------------------- logo de la compania------*/
+    .logo{
+        width: 76px;
+        height: 60px;
+        margin-left: 125px;
+        
+        
+    }
+    
+    .card-title{
+        font-size: 20px;
+        margin: 6px;
+        font-weight:inherit;
+
+    }
+    /*----------- icono de la campanita------------*/
+    .notificacion{
+        font-size: 2.5rem;
+        margin-left: 85px;
+        flex: 1;
+
+    }
+    /*--------------- icono del usuario ---------------*/
+    .perfil{
+        font-size: 40px;
+        margin-left: 7px;
+        margin-bottom: 4px;
+
+    }
+    /*------------- estilos de la companias ---------*/
+    .card{
+        width: 335px;
+        height: 246px;
+        background: #fff;
+        box-shadow:  0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+
+        padding: 12px;
+        display: flex;
+        border-radius: 8px;
+        border-color: black;
+    }
+    .card .card-imagen{
+        width: 100%;
+    }
+    .card .card-imagen img{
+        width: 100%;
+    }
+    /*------- icono de las estrellas ----------*/
+    .estrella{
+        font-size: 24px;
+       /* color:#FCFF68; color: #FD7E14;*/
+       color: #FD7E14;
+        margin-top: -37px;
+        margin-left: 142px;
+    }
+    .card-text{
+    margin: 5px;
+    padding-top: 3px;
+    }
+
+    #carrito{
+        display: none;
+    }
+    
+    #detalle-comida{
+        display: none;
+    
+    }
+
+    #detalle-supermercado{ 
+        display: none;
+      
+    }
+    /* los estilos de las tarjetas de la compania*/
+
+    .colonia-img img{
+        width: 291px;
+        height: 155px;
+    }
+    .colonia-img{
+        height: 160px;
+    }
+
+    .card .walmart-img img{
+        width: 100%;
+        height: 159px;
+
+  }
+    #detalle-medicamentos{
+        display: none;
+    }
+    #detalle-tecnologia{
+        display: none;  
+    }
+    #lista-carrito{
+        display:none;
+    }
+    .cuerpo{
+        width: 335px;
+        height: 208px;
+        background: #fff;
+       /* box-shadow:  0 4px 8px 0 rgb(0,0,0,0.2),  0 6px 20px 0 rgb(0,0,0,0.19);
+*/
+        padding: 12px;
+        display: flex;
+        border-radius: 8px;
+        border-color: black;
+        
+
+    }
+    /*------------ el estilos de los productos */
+   .table-productos img{
+        width: 169px;
+        height: 132px;
+        display: flex;
+
+    }
+    .productos{
+        width: 100%;
+    }
+    .card-img {
+        width: 147px;
+        height: 120px;
+    }
+    .table-cantidad > input{
+        width: 44px;
+        
+        outline: 0;
+        font-size: 16px;
+        margin-left: 11px;
+       padding-left: 12px;
+    }
+    
+    .tabla{
+        padding: 12px;
+        margin-top: -74px;
+    }
+    /* --------------- estilos del carrito ---------*/
+    tr{
+        margin: 20px;
+        border-bottom: grey;
+        
+
+    }
+    .delete{
+        justify-content: end;
+        
+
+    }
+    .card-img img{
+        width: 169px;
+        height: 139px;
+
+    }
+    .producto-contenido{
+        display: flex;
+    }
+    .precio-card{
+        font-family:'Helvetica Neue';
+        font-size: 1.6rem;
+
+    }
+    .h7{
+        font-size: 1.1rem;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .card-titulo{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-top: 2px;
+    }
+   .precio{
+       display: flex;
+       justify-content: end;
+       font-size: 1.1rem;
+       color: red;
+      
+   }
+   .fa-cart-arrow-down{
+   font-size: 50px;
+    padding: 15px;
+    padding-left: 33px;
+    color: orange;
+   }
+  .btn{
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: flex-end;
+	align-content: stretch;
+
+   }
+   .pagar{
+       display: flex;
+       flex-direction: column;
+      border-radius: 14px;
+      justify-content: end;
+   }
+   .btn{
+       width: 71px;
+       border-radius: 7px;
+   }
+    #menu-supermercado{
+        display:;
+       
+    }
+    #menu-medicamentos{
+        display:;
+               
+    }
+    #menu-tecnologia{
+        display:;
+       
+    }
+    #menu-comida{
+        display:;
+       
+    }
+    #productos-comida{
+        display: none;
+    }
+    #SuperMercado{
+        display: none;
+
+    }
+    #botonPago{
+        display: none;
+    }
+    .momento{
+        display: none;
+        width: 180px;
+    }
+    .btn.btn-success{
+        background: linear-gradient(to bottom, #f3a27d  0%, #f8c671 100%) !important ;
+        border-color:#f3a27d !important;
+        color: black;
+        border-radius: 15px;
+    }
+    .btn.btn-secondary{
+        background:linear-gradient(to bottom, #64eb7d  0%, #8DF9B9 100%) !important;
+        border-color:#64eb7d ;
+        color: black;
+        border-radius: 15px;
+    }
+    .btn.btn-light{
+        background: linear-gradient(to bottom, #6bcafaad  0%, #43dce1a4 100%) !important;
+        border-color: #43dce1a4;
+        border-radius: 15px;
+
+    }
+    /*-------------------- Estilos de la tarejta de credito/debito ------*/
+    .contenedor {
+        width: 98%;
+        max-width: 1000px;
+        padding: 25px 19px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: -147px;
+        
+    }
+    .formulario-tarjeta {
+        background: #fff;
+        border-color: #0000;
+        width: 110%;
+       
+        padding: 135px 20px 22px 20px;
+        border-radius: 10px;
+        position: relative;
+        top: -120px;
+        z-index: 1;
+        
+        transition: clip-path .3s ease-out;
+    }
+    .logo-tarjeta {
+        width: 100%;
+        color: #fff;
+        z-index: 2;
+    }
+    
+    
+    
+    .logo-tarjeta img{
+        width: 100%;
+	    
+	    background-size: cover;
+	    
+    }
+    
+    
+    .formulario-tarjeta.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    
+    .formulario-tarjeta label {
+        display: block;
+        color: #7d8994;
+        margin-bottom: 5px;
+        font-size: 16px;
+    }
+    
+    .formulario-tarjeta input,
+    .formulario-tarjeta select,
+    .btn-enviar {
+        border: 2px solid #CED6E0;
+        font-size: 18px;
+        height: 50px;
+        width: 100%;
+        padding: 5px 12px;
+        transition: .3s ease all;
+        border-radius: 5px;
+    }
+    
+    .formulario-tarjeta input:hover,
+    .formulario-tarjeta select:hover {
+        border: 2px solid #93BDED;
+    }
+    
+    .formulario-tarjeta input:focus,
+    .formulario-tarjeta select:focus {
+        outline: rgb(4,4,4);
+        box-shadow: 1px 7px 10px -5px rgba(90,116,148,0.3);
+    }
+    
+    .formulario-tarjeta input {
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    
+    .formulario-tarjeta .flexbox {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .formulario-tarjeta .expira {
+        width: 100%;
+    }
+    
+    .formulario-tarjeta .ccv {
+        width: 100px;
+    }
+    
+    .formulario-tarjeta .grupo-select {
+        width: 100%;
+        margin-right: 15px;
+        position: relative;
+    }
+    
+    .formulario-tarjeta select {
+        -webkit-appearance: none;
+    }
+    
+    .formulario-tarjeta .grupo-select i {
+        position: absolute;
+        color: #CED6E0;
+        top: 18px;
+        right: 15px;
+        transition: .3s ease all;
+    }
+    
+    .formulario-tarjeta .grupo-select:hover i {
+        color: #93bfed;
+    }
+    
+    .formulario-tarjeta .btn-enviar {
+        border: none;
+        padding: 10px;
+        font-size: 22px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(to bottom, #FF5252 0%, #EF2828 100%);
+        box-shadow: 2px 2px 10px 0px rgba(240, 64, 11, 0.486);
+    }
+    
+    .formulario-tarjeta .btn-enviar:hover {
+        background: #1850b1;
+    }
+    #ocultar{
+        display: none;
+    }
+
+    
+   
+    
+    
+    /*----------------------------*/
+   
+  
+
+
+
+    
